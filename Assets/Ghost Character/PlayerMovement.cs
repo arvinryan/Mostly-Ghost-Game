@@ -5,10 +5,12 @@ public class scriptnew : MonoBehaviour
     public float speed;
     public float rotationSpeed;
 
+    private CharacterController characterController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -18,9 +20,10 @@ public class scriptnew : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         
         Vector3 movementDirection = new Vector3 (horizontalInput, 0, verticalInput);
+        float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
         movementDirection.Normalize();
 
-        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+        characterController.SimpleMove(movementDirection * magnitude);
 
         if (movementDirection != Vector3.zero)
         {
