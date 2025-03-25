@@ -180,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 699c51f608c0b054cb6a077925f2aece,
         type: 3}
       propertyPath: m_Name
-      value: Pedestalr
+      value: Pedestal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -190,6 +190,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 711465336}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 699c51f608c0b054cb6a077925f2aece,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 711465337}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 699c51f608c0b054cb6a077925f2aece,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 711465338}
   m_SourcePrefab: {fileID: 100100000, guid: 699c51f608c0b054cb6a077925f2aece, type: 3}
 --- !u!1 &40014177 stripped
 GameObject:
@@ -1791,12 +1799,38 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 2.8486679, z: 2}
   m_Center: {x: 0, y: 1.175357, z: 0}
+--- !u!114 &711465337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711465332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8745d7089d3d24197618ad0faf5511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711465338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711465332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723378aaf404b1d41b0049e6b3f1c36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: []
+  colelcted: 0
 --- !u!1 &722954032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7271449666460269675, guid: 481b89ed92065d94091111d2ab3083ca,
@@ -4439,6 +4473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mostly Ghostly Character (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1231e12a14696d545b23bb6c18a36a51,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
