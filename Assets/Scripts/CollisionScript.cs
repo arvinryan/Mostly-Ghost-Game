@@ -1,30 +1,24 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CollisionScript : MonoBehaviour
+public class EnemyCollision : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision objectCollidedWith)
     {
-        if (other.gameObject.tag == "enemy")
+        if (objectCollidedWith.gameObject.tag == "Player")
         {
-            print("ENTER");
+            Debug.Log("Destroying Enemy and losing a life!");
+
+            GameManagerScript.Instance.SubtractLives(1);// subtract life
+            Destroy(this.gameObject); // destroy self
+
+            if (GameManagerScript.Instance.GameOver())
+            {
+                //destroy the object that collided with it if no lives left
+                Destroy(objectCollidedWith.gameObject);
+                //reload the scene
+                SceneManager.LoadScene("LevelSample");
+            }
         }
     }
-
-    void OnTriggerStay(Collider other)
-    {
-         if (other.gameObject.tag == "enemy")
-        {
-            print("STAY");
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-         if (other.gameObject.tag == "enemy")
-        {
-            print("EXIT");
-        }
-
-    }
-
 }
