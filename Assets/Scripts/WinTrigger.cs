@@ -3,7 +3,7 @@
 
     public class WinTrigger : MonoBehaviour
     {
-        public string sceneToLoadOnLose = "WinScene"; // Name of the scene to load on game over
+        public string sceneToLoadOnWin = "MainMenu2"; // Name of the scene to load on game over
         void OnTriggerEnter(Collider other)
         {
             // Check if the entering object is the player (using tags, for example)
@@ -26,6 +26,6 @@
         }
          void ReloadScene()
     {
-        SceneManager.LoadScene(sceneToLoadOnLose);
+        SceneManager.LoadScene(sceneToLoadOnWin);
     }
     }

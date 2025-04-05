@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class YouLose : MonoBehaviour
 {
-    public string sceneToLoadOnLose = "MainMenu"; // Name of the scene to load on game over
-
+    public string sceneToLoadOnLose = "MainMenu1"; // Name of the scene to load on game over
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) // Or whatever tag your player has

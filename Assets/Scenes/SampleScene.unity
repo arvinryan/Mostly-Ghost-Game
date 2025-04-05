@@ -5453,7 +5453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d19605b8a1c20d4e8fed8a06b3981fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoadOnLose: MainMenu
+  sceneToLoadOnLose: MainMenu1
 --- !u!4 &802382613937352387
 Transform:
   m_ObjectHideFlags: 0
@@ -5937,6 +5937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bd66c1899bd0b4893efbe103512579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoadOnWin: MainMenu2
 --- !u!135 &7034078467277384744
 SphereCollider:
   m_ObjectHideFlags: 0
