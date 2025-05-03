@@ -15,6 +15,6 @@ public class FollowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        self.transform.position = Vector3.MoveTowards (self.position, targetObj.position, 5* Time.deltaTime);
+        self.transform.position = Vector3.MoveTowards (self.position, targetObj.position, 4* Time.deltaTime);
     }
 }
